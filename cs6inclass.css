@@ -1,0 +1,6 @@
+table, td {border: 1px solid black;}
+table{width:75%; margin-right:auto;margin-left:auto;
+font-family:arial; text-align:center;color:navy;
+background:url(music-1.gif)repeat center fixed; }
+
+tr#first{background-color: yellow;}
