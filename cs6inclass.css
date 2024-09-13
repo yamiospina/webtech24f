@@ -1,6 +1,13 @@
 table, td {border: 1px solid black;}
 table{width:75%; margin-right:auto;margin-left:auto;
 font-family:arial; text-align:center;color:navy;
-background:url(music-1.gif)repeat center fixed; }
+background:url(music-1.gif)repeat center fixed;
+border-collapse:collapse; }
 
 tr#first{background-color: yellow;}
+
+.one{width:30%;}
+.two{width:50%;}
+.three{width:20%;}
+
+caption{font-size:3em;margin:5%}
