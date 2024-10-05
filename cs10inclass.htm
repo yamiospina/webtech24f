@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>MultiMedia and CSS</title>
+
+    <style>
+        /* Your styles go here */
+        img#b {display:block; margin-right:auto; margin-left: auto; width:25%; border-radius: 50%;margin-top:5%;}
+
+        @keyframes dizzy {
+            from{transform:rotate(0deg)}
+            to{transform: rotate(360deg);}
+        }
+
+        .beaverturn{
+            animation-name:dizzy;
+            animation-duration:10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-out;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <!-- Your HTML goes here -->
+    <h1>Here is adding an audio file - Glitch Short Break</h1>
+    <audio autoplay controls loop>
+        <source src="glitch-short-break-1.mp3" type="audio/mp3" />
+    </audio>
+    <h1> Adding Video file here</h1>
+    <video autoplay controls loop>
+        <source src="TestVideoByFisk-1.mp4" type="video/mp4" />
+    </video>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/w9CXXsu6YSA?si=CAtcglemukxxV7Yx"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <hr/>
+
+        <img id="b" class="beaverturn" src="beaver.jpg" alt="beaverimage" title="Go Babson"/>
+</body>
+
+</html>
