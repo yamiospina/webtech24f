@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>homework 2</title>
+
+	<style>
+	/* Your styles go here */
+	form{
+		padding: 40px;
+		background-image:url(brick.gif);
+		font-family: Arial, sans-serif;
+		margin: 40px 200px;
+	
+	}
+	
+		input#sub {
+            background-color: green;
+			height: 30px;
+        }
+        input#res {
+            background-color: yellow;
+			height: 30px;
+        }
+
+		table
+		{
+			font-family:Arial; 
+			font-size:20px;
+			width:60%;
+			border: 2px solid black;
+			text-align:center;
+			margin-left:auto; margin-right:auto;
+     
+		}
+
+		td {
+            border: 2px solid black;
+		
+		}
+
+		.first
+		{
+			width:35%;
+			
+		}
+		.sec
+		{
+			width:20%;
+		}
+
+		.tr
+		{
+			width:25%;
+		}
+
+		.fou
+		{
+			width:20%;
+		}
+
+		p
+		{
+			text-align:center;
+		}
+
+		img{
+			width:45%;
+		}
+
+		h1{font-family: Lucida Grande; font-size:2em; color:navy; font-style:bold; padding-bottom:20px; text-align:center;}
+	</style>
+	
+	<script>
+	/* Your JavaScript goes here */
+	  
+	</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+
+	<h1>Catalog of Sweaters</h1>
+
+	<form method ="Post" action="">
+		<table >
+			<tr>
+			 	 <td class="first">Product Image</td>
+				 <td class="sec">Product Price</td>
+				 <td class="tr">Product Selection</td>
+				 <td class="fou" >Product Quantity</td>
+			</tr>
+		
+			<tr>
+				<td class="first">
+					<img src="redsweater.jpg" alt="red" title="redsweater">
+				</td>
+
+				<td class="sec"> $35.00</td>
+
+				<td class="tr" >
+                <input type="radio" name="mycolor" value="Red"/> Red Sweater
+				</td>
+
+				<td class="fou">
+				Quantity: <br/><input  type="text" name="red_qty" size="6">
+				</td>
+			</tr>
+
+			<tr>
+				<td class="first">
+					<img src="bluesweater.jpg" alt="blue" title="bluesweater">
+				</td>
+
+				<td class= "sec"> $45.00</td>
+
+				<td class="tr" >
+				<input type="radio" name="mycolor" value="blue"/>Blue Sweater
+				</td>
+
+				<td  class="fou">
+				Quantity: <br/><input  type="text" name="blue_qty" size="6">
+				</td>
+			</tr>
+
+			<tr>
+				<td class="first">
+					<img src="whitesweater.jpg" alt="whitswe" title="whitesweater">
+				</td>
+
+				<td class="sec"> 40.00</td>
+
+				<td class="tr">
+				<input type="radio" name="mycolor" value="white"/> White Sweater
+				</td>
+
+				<td class="fou">
+				Quantity:<br/> <input  type="text" name="white_qty" size="6">	
+				</td>
+				
+			</tr>
+
+		</table>
+	<p>
+		<input id="sub"type="submit" value="Submit Selections">
+        <input id="res" type="reset" value="Clear Selections">
+	</p>
+	</form>
+	
+	
+  </body>
+</html>
