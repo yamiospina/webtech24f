@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>Quiz 2</title> <!-- No credit if you do, -1 if you do not -->
+
+        <style type="text/css">
+         h1#title{font-family: arial;color:yellow;background-image: url(insta.jpg);
+        margin-left:200px; margin-right:200px; text-align:center;}
+        
+        form{
+            background-color: silver; font-size: arial; color:navy;
+            margin-right:300px; margin-left:300px;
+            padding-left:100px;
+            padding-top:50px;
+            padding-bottom:50px;
+
+
+        }
+       
+        </style>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h1 id="title">About Instagram</h1>
+        <!-- The title, About Instagram must use h1 tag -->
+        <!-- It uses Arial font, yellow color. (1) -->
+        <!-- It must have the image insta.jpg as the background. (2)-->
+        <!-- There must be a 200px (white) space to the left and right of the title(1)-->
+
+            
+        <!-- Below the title, construct the form described below (6)--> 
+        <!-- 1. The form has a text box to capture your name - size is 20 -->
+        <!-- 2. The form has a radio button to capture whether you like -->
+        <!--    Instagram. Yes and No options. -->
+        <!-- 3. The form has a dropdown to see how many times a day you access -->
+        <!--    Instagram. The three values are 100, 50, and 25. -->
+        <!-- 4. The form has a Submit Data and a Clear Data button to submit -->
+        <!--    and reset the form data respectively. -->
+        <!--    The form has a silver background, navy font, arial. (2)-->
+        <!-- 5. The words "Your Name" and "How many times you access Instagram"
+                must be in orangered color font. (1)-->
+        <!--    The form has a 300px white space to the right and left.(1)-->
+        <!--    The form has a 100px silver space to the left. (1)-->
+        <!--    The form has a 50px silver space to the top and bottom. (2)-->
+          <form action="" method="POST">
+            <p>
+                Your Name:<input type="text" name="urname" size="20"/>   
+            </p>
+
+            <p>
+                 Do you like Instagram:
+                Yes <input  type="radio" name="like" value="yes"/> 
+                No <input type="radio" name="like" value="no"/> 
+            </p>
+
+            <p>
+                How many times you access Instagram: 
+                <select name="times">
+                    <option value="Empty">Please Select One</option>
+                    <option value="100">100</option>
+                    <option value="50">50</option>
+                    <option value="25">25</option>
+                </select>
+            </p>
+
+            <p>
+               <input type="submit" name="submit" value="Submit Data"/>
+			<input type="reset" name="reset" value="Clear Data"/>
+            </p>
+        
+
+
+            
+         </form>  
+        <!-- For the last 7 points do the following: -->
+        <!-- Create a nested list using the data given.-->
+        <!-- The outer list must be unordered -(1)-->
+        <!-- It must use the image star.gif as the bullet. (2)-->
+        <!-- The inner list must be ordered with small greek numbering.(2)-->
+        <!-- This h1, which I have already tagged, must not have any background or color. -->
+        <!-- No styles needed. In other words, don't touch it. -->
+
+        <h1> Courses offered in Babson (7 points) </h1>
+        <ul>
+            <ol>
+               
+          <li>Management Courses  
+            <li>FME</li>
+            <li>SME</li> 
+                
+        </li>
+            Liberal Arts Courses
+                FCI
+                Critical Race  
+            </ol>
+           
+        </ul>
+
+
+        
+
+    
+    </body>
+</html>
