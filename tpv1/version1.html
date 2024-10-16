@@ -111,10 +111,12 @@
         
         function contactFunction() {
             document.getElementById("contact").style.display = "block";
+            document.getElementById("wells").style.display = "none";
         }
 
         function showWells() {
             document.getElementById("wells").style.display = "block";
+            document.getElementById("contact").style.display = "none";
         }
 
         function clearHome() {
@@ -132,10 +134,11 @@
             audio.play();
         }
 
-        function showCrochet()
+        /*function showCrochet()
         {
 
-        }
+        }*/
+
     </script>
 	
   </head>
@@ -149,7 +152,7 @@
         <h1 id="header"> Stitch Sisters </h1>
     </div>
 		
-
+<!--these topnav are my navigation bar, spereated into two bc it was giving me usses -->
     <div class="topnav" id="mytopnav">
         <a class="active" onclick="clearHome();playAudio();">Home</a>
         <div class="dropdown">
@@ -169,9 +172,10 @@
             <button class="dropdownbutton">Locations</button>
                 <div class="dropdowncontent">
                     <a href="boston.htm">Boston</a>
-                    <a onclick="showWells();pauseAudio();showVidcrochet()">Wellesley</a>
+                    <a onclick="showWells();pauseAudio();">Wellesley</a>
                 </div>
         </div>
+        <!--this is my about me page-->
         <a onclick="contactFunction()">Contact Me</a> 
         <a href="aboutme.htm">About Me</a>
 
@@ -180,7 +184,7 @@
 </div>
 
 <div>
-    
+    <!--this is my contact form-->
           <section id="contact" class="contact"> 
           
         <p>If you have any questions, feel free to fill out the form below and we'll get back to you soon.</p>
@@ -196,8 +200,8 @@
         </section>
 
 
-
-<div class="dropdownbutton">
+<!--this is the image with hotspots -->
+<div >
 
         <section id="wells" class="wellesley" >
             <map name="wells" id="Middle">
@@ -211,7 +215,7 @@
         </section>
 </div>
 
-
+<!--i copied audio from cs10 for now till i find a better one -->
 <div>
     <section id="homeaudio">
         <audio id="myAudio" autoplay controls loop>
@@ -220,6 +224,7 @@
     </section>
 </div>
 
+<!-- also copied form cs10 but still makes sense, i have not made it only show on one page -->
 <div>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/w9CXXsu6YSA?si=CAtcglemukxxV7Yx"
     title="YouTube video player" frameborder="0"
