@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>CS14 </title>
+        <!-- Don't worry about the styles. I just added them to make the page look better -->
+        <style type="text/css">
+            h1 {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            h1 {
+                text-align: center;
+            }
+            img {border:5px solid black; display:block; margin:auto;}
+            p {margin-right:100px; margin-left:100px; margin-bottom:50px;font-family:Arial;}
+        </style>
+
+        <script type="text/javascript">
+        function changeImg()
+        {
+            var myimg;
+            myimg = document.getElementById("a");
+
+            var myinp;
+            var myinp = prompt("Enter one of maple, shamrock, thyme, or clover");
+            myinp= myinp.toLowerCase();
+
+            if(myinp == "maple")
+        {
+            myimg.src = "maple-1.jpg";
+            myimg.alt = "Maple Leaf";
+            mymig.title = "Majestic Maple";
+        }
+
+        else if (myinp == "shamrock")
+        {
+            myimg.src = "shamrock-1.jpg";
+            myimg.alt = "Shamrock Leaf";
+            myimg.title = " Super Shamrock";
+
+        }
+
+        else if (myinp == "thyme")
+        {
+            myimg.src = "thyme-1.jpg";
+            myimg.alt = "Thyme Leaf";
+            myimg.title = " Thyme";
+        }
+
+        else if (myinp== "clover")
+        {
+            myimg.src = "clover-1.jpg";
+            myimg.alt = "Clover Leaf";
+            myimg.title = "clover";
+        }
+
+        else
+        {
+            alert(" You entered the wrong input:");
+        }
+       
+        }
+
+      function changePix()
+      {
+        const myimg = document.getElementById("c")
+       
+        if(myimg.src.match("planes-1.jpg") == "planes-1.jpg")
+      {
+        myimg.src ="Ships-1.jpg";
+      }
+        else
+        {
+            myimg.src= "planes-1.jpg";
+        }
+
+
+
+      }
+           
+        </script>
+        
+    </head>
+
+    <body>
+        <!-- Your HTML goes here -->
+        
+        <!-- PROBLEM TWO -->
+        <h1> Using Inputs with Conditional Statements - 2</h1>
+        <div> <p>
+            When the user clicks on the image (placeholder shown) below, ask the user to 
+            input one of 4 values: Shamrock, Clover, Thyme or Maple. Based on what the user
+            provides, show the corresponding image. The 4 images are provided to you. 
+            If you get this to work, then, what if the user types in using all-lower-case or 
+            all-upper-case? How will you change the code to cover that?
+        </p>
+        </div>
+        <div>
+        <img id="a" onclick="changeImg()"src="" alt="Image Goes Here" title="" width="200"/>
+        </div>
+
+        <!-- END OF PROBLEM TWO.-->
+
+        <!-- PROBLEM 3- We may/not get to this in class today.-->
+        <h1> Changing the Image when you click on it</h1>
+        <div><p>
+            Given below is an image of planes. When you click on it,
+            change it to the image of ships. The way the function must work is, 
+            no matter what the image is, when you click on it, it must change to the 
+            other image. The ALT and TITLE must change appropriately.
+        </p></div>
+        <div>
+            <img  id ="c" onclick=changePix() src="planes-1.jpg.jpg" alt="Planes" title="Flying High" width="200"/>
+        </div>
+    
+    </body>
+</html>
