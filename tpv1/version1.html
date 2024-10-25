@@ -8,13 +8,27 @@
 
 	<style>
 	/* Your styles go here */
-	div#banner{background:url(checked.jpg);margin-top:2%;padding-bottom:10px;}
+	div#banner{background:url(checked.jpg);padding-bottom:10px;padding-top: 10px;}
     h1#header{text-align:center;color:black;font-weight: bold;}
+    body{background-color:pink;}
+    p{color:black;font-family: sans-serif;}
+
+    div#statement{background-color: white;margin-top:5%;writing-mode: vertical-rl;
+      transform: rotate(270deg); float:left;
+    
+        width: 350px; /* Adjust the width as per your content */
+    padding: 15px 25px 0px 25px; /* Adjust padding for space inside the container */
+    position: absolute;
+    left: 0; /* Align to the left */
+    top:25%; /* Align to the center vertically */
+    
+    }
 /*video will display under the types tab in crocheting-->*/
-/*there is an image under the locations tab in both, boston and wellesley*/
+/*there is an image under the locations tab in both, bostonwriting-mode: vertical-rl;
+            transform: rotate(180deg); and wellesley*/
 
     .topnav {
-            background-color:lightpink;
+            background-color:white;
             overflow: hidden;
             font-family: Lucida Handwriting;
         }
@@ -31,7 +45,7 @@
 
         
         .active {
-            background-color:beige;
+            background-color:silver;
             color: white;
         }
 
@@ -86,13 +100,6 @@
             display: none;
         }
 
-        .contact {
-            display: none;
-        }
-    .wellesley{
-        display: none;
-    }
-
     audio {
             display: none;
         }
@@ -109,22 +116,6 @@
                         x.className = "topnav";
                     }
                 }
-        /*
-        function contactFunction() {
-            document.getElementById("contact").style.display = "block";
-            document.getElementById("wells").style.display = "none";
-        }
-
-        function showWells() {
-            document.getElementById("wells").style.display = "block";
-            document.getElementById("contact").style.display = "none";
-        }*/
-
-      /*  function clearHome() {
-            document.getElementById("wells").style.display = "none";
-            document.getElementById("contact").style.display = "none";
-        }
-*/
         function pauseAudio() {
             var audio = document.getElementById('myAudio');
             audio.pause();
@@ -135,14 +126,6 @@
             audio.play();
         }
 
-        function showCrVideo(){
-            const video = getElementById('myCrvideo');
-        }
-
-        /*function showCrochet()
-        {
-
-        }*/
 
     </script>
 	
@@ -150,57 +133,62 @@
 
   <body>
     
-
-
 	<!-- Your HTML goes here -->
 	<div id="banner">
         <h1 id="header"> Stitch Sisters </h1>
     </div>
-		
-<!--these topnav are my navigation bar, spereated into two bc it was giving me usses -->
+
     <div class="topnav" id="mytopnav">
         <a class="active" onclick="clearHome();playAudio();">Home</a>
         <div class="dropdown">
             <button class="dropdownbutton">Types</button>
-                <div class="dropdowncontent">
-                    <a  href= "crocheting.htm" >Crocheting</a> <!--onclick="showCrochet();showCrVideo()"*/-->
-                    <a href="knitting.htm">Knitting</a>
-                    <a href="embroidery.htm">Embroidery</a>
-                    <a href="pneedle.htm">Punch Needle</a>
-
-                </div> 
+            <div class="dropdowncontent">
+                <a href="crocheting.htm">Crocheting</a>
+                <a href="knitting.htm">Knitting</a>
+                <a href="embroidery.htm">Embroidery</a>
+                <a href="pneedle.htm">Punch Needle</a>
+            </div>
         </div>
-
-    
-    <div class="topnav2" id="mytopnav">
-	  <div class="dropdown">
+        <div class="dropdown">
             <button class="dropdownbutton">Locations</button>
-                <div class="dropdowncontent">
-                    <a href="boston.htm">Boston</a>
-                    <a href="wellesley.htm">Wellesley</a>   <!--onclick="showWells();pauseAudio();"--> 
-                </div>
+            <div class="dropdowncontent">
+                <a href="boston.htm">Boston</a>
+                <a href="wellesley.htm">Wellesley</a>
+                <a href="online.htm">Online</a>
+            </div>
         </div>
-        <!--this is my about me page-->
-        <a href="contactme.htm">Contact Me</a> <!--onclick="contactFunction()"-->
+        <a href="contactme.htm">Contact Me</a>
         <a href="aboutme.htm">About Me</a>
+       <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a> 
+    </div>  
+ 
+   <div id="statement">
+    <P>
 
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-    </div>
+        Welcome to Stitch Sisters, your go-to 
+         for all things yarn and thread! 
+        Whether you're passionate about crocheting,
+         knitting, embroidery, or punch 
+        needle, we offer a wide range of 
+        tutorial videos for every skill level. 
+        Discover step-by-step guides to help
+         you create beautiful, handmade pieces, 
+        and explore local and online shops to
+         find the perfect supplies. We also 
+        provide information on craft studios
+         and community spaces where you can join
+         workshops and meet fellow craft enthusiasts.
+          Dive into the world of fiber 
+         arts and unleash your creativity with us!</P>
+
 </div>
-
-<div>
-
 <div>
     <section id="homeaudio">
         <audio id="myAudio" autoplay controls loop>
             <source src="62D296D5-70D5-4DB5-9A4E-1AA3482F4F1F.mp3" type="audio/mp3" />
         </audio>
     </section>
-</div>
-
-
-
-          
+</div>    
 
   </body>
 </html>

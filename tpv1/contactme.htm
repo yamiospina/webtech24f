@@ -8,7 +8,15 @@
 
 	<style>
 	/* Your styles go here */
-	
+  h1,h3{text-align: center;}
+  body{background-color: pink;}
+  form {background-color:white; font-family:Arial; 
+              width:60%; margin-right:auto; margin-left:auto; 
+                color:black;
+                border:2px palevioletred;
+                padding-top:1%; padding-bottom:1%; padding-left:3%;
+        }
+		
 	
 	</style>
 	
@@ -32,7 +40,29 @@
                     <input type="text" name="myname" size="20"  placeholder="Enter Name"/></p>
                 
                 <p>Please Enter Your Email: &nbsp; &nbsp;
-                    <input type="text" name="myemail" size="35" /></p>
+                    <input type="text" name="myemail" size="35" />
+                </p>
+
+                <p>Please Enter Your Age: &nbsp; &nbsp;
+                  <input type="text" name="mage" size="10" />
+              </p>
+
+                <p>
+                 What do you have questions about: 
+                  <select name="qtyoe">
+                      <option value="Empty">Please Select One</option>
+                      <option value="Cr">Crocheting</option>
+                      <option value="Kt">Knitting</option>
+                      <option value="Em">Embroidery</option>
+                      <option value="Pn">Punch Needle</option>
+                  </select>
+              </p>
+
+                <p>
+                  <input type="submit" name="Submit" value="Submit Data"/> &nbsp; &nbsp;
+                  <input type="reset" name="Reset" value="Clear Data"/>
+                </p>
+  
         
                 </form>
                 </section>
