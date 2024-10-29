@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>CS16-Processing Form Inputs</title>
+        <style type="text/css">
+            form {margin-left:200px; margin-right:200px; padding:30px;
+                  font-family:Arial; font-weight:bold; background-color:Silver;}
+            h1 {text-align:center; font-family: Arial Baltic;}
+        </style>
+
+        <script type="text/javascript"> /*name is the what we named in the html,  we are using this function to pull 
+        the value of the name from our form */
+             function showData()
+             {
+                var myform, myname, myage, mysex, mylevel, mycolor;
+                myform = document.getElementById("daform");
+                myname = myform.name.value;  
+                myage = myform.age.value;
+                mysex= myform.sex.value;
+                mylevel = myform.level.value;
+                mylevel= mylevel.toLowerCase(); /*it wont be case sensitive */
+                mycolor = myform.colors.value;
+
+                if (myname=="")
+                {
+                  alert("please enter your name");  
+                }
+                /* disadvantage, it checks for both erros so user is unaware where it msessed up*/
+                else if ((myage=="") || (isNaN(myage)==true))/*we dont want it to blank (1st part) and we want the value to be a number, NAn is chcking for value*/
+                {
+                    alert(" Age must be entered and please enter a numerical value");
+                }
+
+                else if (mysex=="NULL")
+                {
+                    alert("Please select a value for sex");
+                }
+                /*we are making a set to check if value is within the options we already made*/
+                /*|| or, would not work, bc if it does not enter the first value, it would give an error everytime
+                when we use the != operator we have to use &&*/
+                else if ((mylevel != "freshperson") && (mylevel !="sophmore")&& (mylevel != "junior")&&(mylevel != "senior"))
+                {
+                    alert("Please enter one of the 4 valid values");
+                }
+
+                else if (mycolor=="null")
+                {
+                    alert("please select a color");
+                }
+
+                else 
+                {
+                    event.preventDefault();
+                    myform.result.value ="Hi my name is " + myname +"I am " + myage + " I identify as " + mysex + " I am in "+ mylevel;
+                    myform.style.backgroundColor= mycolor; /*selects the color that was picked in the values*/
+                }
+
+             }
+
+        </script>
+        
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        
+        <h1>Processing form inputs</h1>
+        <form id="daform" action="" method="post">
+            <p>
+                Enter your name: <input type="text" name="name" size="40" /> &nbsp;&nbsp;
+                Enter your age : <input type="text" name="age" size="4" />
+            </p>
+            <p> 
+                Select your gender: &nbsp;
+                <select name="sex">
+                    <option value="NULL">Please Select a value </option>
+                    <option value="Female"> Female </option>
+                    <option value="Male"> Male </option>
+                </select>
+            </p>
+            <p>
+                Enter your college level: <input type="text" name="level" size="20" placeholder="freshperson, sophomore, etc."/>
+            </p>
+            <p>
+                Select the color you want for the form: &nbsp;
+                <select name="colors">
+                    <option value="null"> Please select a color</option>
+                    <option value="green">green</option>
+                    <option value="blue">blue</option>
+                    <option value="yellow">yellow</option>
+                </select>
+            </p>
+            <p> 
+                Your selections will appear here: <br />
+                <textarea name="result" cols="40" rows="3"></textarea>
+            </p>
+            <p>
+                <!--when we click submit, it will show all the values, we asked for in the functions-->
+                <input onclick="showData()" type="submit" name="submit" value="Show Me" style="width:100px;height:40px" />
+                &nbsp;&nbsp;
+                <input type="reset" name="reset" value="Clear Me" style="width:100px;height:40px" />
+            <!--results does not need a variable-->
+            </p>
+
+        </form>
+    
+    </body>
+</html>
