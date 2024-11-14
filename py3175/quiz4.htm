@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Quiz 4</title><!-- Minus 1 if not filled -->
+
+	<style>
+	/* Your styles go here */
+    form { width:50%; margin-right:auto; margin-left:auto; padding-left:5%;
+           background-color:silver; padding-top:5%; padding-bottom:5%;}
+	textarea {border:3px ridge red;}
+		
+	</style>
+	<script type="text/javascript">
+		function showColor()
+		{
+	var myf, c1, c2,discolor;
+	
+	
+	myf = document.getElementById("myform");
+	c1=myf.color1.value;
+	c2=myf.color2.value;
+	discolor=myf.pallette.value;
+		
+		if((c1=="green")&&(c2=="red"))
+	{
+		discolor.style.backgroundColor= "brown";
+	}
+
+
+	 if((c1=="green")&&(c2=="blue"))
+	{
+		discolor.style.backgroundColor=  "cyan";
+	}
+
+	if((c1=="yellow")&&(c2=="red"))
+	{
+		discolor.style.backgroundColor=  "orange";
+	}
+
+	if((c1=="yellow")&&(c2=="blue"))
+	{
+		discolor.style.backgroundColor=  "green";
+	}
+		}
+			
+
+	
+
+	</script>
+	
+	
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	
+		<form id="myform" method="POST" action="">
+			<p>
+				<select name="color1">
+					<option value="null">Select Color One</option>
+					<option value="green">Green</option>
+					<option value="yellow">Yellow</option>
+				</select> &nbsp; &nbsp;
+				<select name="color2">
+					<option value="null">Select Color Two</option>
+					<option value="red">Red</option>
+					<option value="blue">Blue</option>
+				</select> 
+			</p>
+			<p>
+				<textarea name="pallette"></textarea>
+			</p>
+            <p>
+                <input onclick="showColor()"type="submit" name="submit" value="SHOW"/> &nbsp; &nbsp;
+                <input type="reset" name="reset" value="NO"/>
+            </p>
+		</form>
+
+	<!-- You are given a form with two drop down lists. Each list has two colors -->
+    <!-- The user will pick one color from each list. -->
+    <!-- Depending on the colors chosen, please set the background of the 
+        text area (the one with a red border) to the color that results from 
+        mixing the two colors chosen (17 points). You may use the following for this 
+        problem.-->
+    <!-- Green and Red makes Brown -->
+    <!-- Green and Blue makes Cyan -->
+    <!-- Yellow and Red makes Orange -->
+    <!-- Yellow and Blue makes Green -->
+    <!-- For the additional 8 points, warn the user if the user does not select 
+         a color from each list. Make sure you are specific with the error message.
+         The user must be told which list (the first or the second) the user did 
+         not select the color from. -->
+    
+		
+	
+	
+  </body>
+</html>
