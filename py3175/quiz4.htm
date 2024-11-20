@@ -17,12 +17,23 @@
 		function showColor()
 		{
 	var myf, c1, c2,discolor;
-	
+	event.preventDefault();
 	
 	myf = document.getElementById("myform");
 	c1=myf.color1.value;
 	c2=myf.color2.value;
-	discolor=myf.pallette.value;
+	discolor=myf.pallette;
+
+	/*if (c1 === "null") {
+                alert("Please select a color from the first list.");
+                return;
+            }
+            if (c2 === "null") {
+                alert("Please select a color from the second list.");
+                return;
+            }*/
+
+
 		
 		if((c1=="green")&&(c2=="red"))
 	{
@@ -30,17 +41,17 @@
 	}
 
 
-	 if((c1=="green")&&(c2=="blue"))
+	else  if((c1=="green")&&(c2=="blue"))
 	{
 		discolor.style.backgroundColor=  "cyan";
 	}
 
-	if((c1=="yellow")&&(c2=="red"))
+	else if((c1=="yellow")&&(c2=="red"))
 	{
 		discolor.style.backgroundColor=  "orange";
 	}
 
-	if((c1=="yellow")&&(c2=="blue"))
+	else if((c1=="yellow")&&(c2=="blue"))
 	{
 		discolor.style.backgroundColor=  "green";
 	}
