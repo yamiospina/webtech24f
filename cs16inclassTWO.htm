@@ -19,15 +19,49 @@
 	<script type="text/javascript">
     function showConver()
     {
-      var myform, myeuro;
-      event.preventDefault();
+      var myform, myeuro, mydollar;
+     /* event.preventDefault();*/
 
       myform= document.getElementById("convrt");
 
       myeuro= myform.euro.value;
+      mydollar=myform.dollar.value;
+
+      if((myform.euro.value=="")&&(myform.dollar.value==""))
+        {
+            alert("Please enter a value");
+        }
+
+      else if ((myform.euro.value !="")&&(myform.dollar.value !=""))
+        {
+            alert("Please only fill one value")
+        }
+      
+        else
+        {
+          if((dollar is filled and euro is not ))
+        {
+          if dollar is NaN{
+            alert();
+          }
+          else{
+            prevent default
+          }
+        }
+        else
+        {
+          if eriro is NaN{
+            alert
+          }
+          else{
+            event 
+            convet
+          }
+        }
+       }
 
       /*mydollar= myform.dollar.value;*/
-      myform.mydollar.value=parseFloat(myeuro)/0.93;
+      /*myform.mydollar.value=parseFloat(myeuro)/0.93;*/
      
 
 

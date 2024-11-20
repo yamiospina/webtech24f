@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Interesting JS/CSS</title>
+
+	<style>
+		/* Your styles go here */
+	</style>
+
+	<script type="text/javascript">
+		function showMe() {
+			const myprod = document.querySelector('input[name="prod"]').value.trim().toLowerCase();
+			/*this does not use ID*/
+			const myqty = document.forms["daform"]["qty"].value;
+			/*this uses the form id and the form field that you want to access*/
+
+			/*const myqty = document.forms[0]["qty"].value; -- for this one when you have multiple form on the page
+			you call the one you want starting at 0*/
+
+			var myamtdue = document.forms["daform"]["amtdue"];
+			/*if you don't add the .value it will get the strings to the field. You are assigning a FIELD to this variable
+			that you can use later to put a value to be put back for the user to see*/
+
+			const pricelist = {car: 35000, motorcycle: 15000, cycle: 5000}; /*called an object in java*/
+			const myset = ["car", "motorcycle", "cycle"]; /*when you have to validate a set of values, still have to multiply the proce later*/
+			/*if (!myset.includes(myprod))
+			if (!myprod in myset) these teo are exactl the same */
+
+			if(isNaN(myqty) || !(myqty)) /*checking if qty is blank */
+			{
+				alert("Please Enter a valid value for quantity");
+				return; /*if the if is true, it will break the cycle and ask to return the value its asking for */
+			}
+
+			if (!(myprod in pricelist)) /*is the product typed in the list we made prior*/
+			 {
+				alert("Please enter a valid product");
+			} 
+			
+			else {
+				event.preventDefault();
+				let amt;
+				
+				amt = myqty * pricelist[myprod];
+				myamtdue.value ="$" + amt.toFixed(3);
+				
+				alert(pricelist[myproduct]);
+			}
+		}
+
+	</script>
+
+
+</head>
+
+<body>
+	<!-- Your HTML goes here -->
+	<form id="daform" method="POST" action="">
+		<p>
+			Product: &nbsp; <input type="text" name="prod" size="10" />
+		</p>
+		<p>
+			Quantity: &nbsp; <input type="text" name="qty" size="10" />
+		</p>
+		<p>
+			Amount Due: &nbsp; <input type="text" name="amtdue" size="10" />
+		</p>
+		<p>
+			<input onclick="showMe()" type="submit" name="submit" value="Show Me" size="10" />
+			<input type="reset" name="reset" value="Clear" size="10" />
+		</p>
+
+	</form>
+
+
+
+</body>
+
+</html>

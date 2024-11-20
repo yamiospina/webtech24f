@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>CS 19 in class - slideshow</title>
+	<style>
+        p, h3 {text-align:center;}
+        img {width:30%; border:5px solid red;}
+        button {width:150px; height:40px; 
+                background-color:green;; font-family:arial; 
+                color:yellow;}
+        div#b{text-align:center;}
+	</style>
+    
+    
+    <script type="text/javascript">
+        var myimages = new Array("tiger5.jpg", "tiger6.jpg", "tiger7.jpg", "tiger8.jpg") /*we create this variable outside == global var*/
+      
+
+        var chgcolor = new Array ("red", "pink", "green", "blue");
+        var mycaps = new Array ("tig1", "tig2", "tig3", "tig4");
+
+        var counter = 0; /*this will count the index of th eimage we are calling*/
+
+        function showSlides()
+        {
+            var y = document.getElementById("daimg");
+
+            c = Math.floor(Math.random()* myimages.length);  /*math floor, rounds to lowerst number, converts it to only 0-3 for index */
+            y.src=myimages[c];
+            setTimeout("showSlides()", 2000);
+        }
+
+           /* x.src = myimages[counter];
+            x.style.borderColor=chgcolor[counter];/*we are calling our array variable, to change when counter increases*
+            var y = document.getElementById("myhead");
+            y.innerHTML = mycaps[counter];
+            
+            ++ counter; /*this will increase the index by one, like clicking on to the next image *
+            if(counter>myimages.length-1)
+                {
+                    counter =0;
+                }
+            
+            setTimeout("showSlides()", 1000);*/
+
+            /*since we only have 4 images, index can only go up to 3, it needs to stop after that*/
+        
+        
+    </script>
+</head>
+<!--We want to use an array variable, that will store more than 1 value at a time 
+    if an array has 5 values, index 0-4-->
+
+    <!--we can not use a regular variable, bc it can not hold more than one image-->
+<body>
+    <p>
+    
+    <img id="daimg" src="tiger5.jpg" alt="Slide Show of Tigers" title="Tigers"/>
+    <h4 id="myhead">test</h4>
+    </p>
+    
+    <!-- The above h3 will be used for showing a caption, if needed.-->
+    <div id="b">
+        <button onclick="showSlides()" >Click to stop/resume</button>
+    </div>
+     
+</body>
+</html>

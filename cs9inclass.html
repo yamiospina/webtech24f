@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>CS 9 in class</title>
+
+    <style>
+      form{background-color: silver; border: lime solid 2px; font-family: arial; padding-left:5%;
+         margin:auto; width:60%; padding-top: 2%; padding-bottom:2%;}
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <!-- Your HTML goes here -->
+    <h1> My Class Form</h1>
+
+    <form method="POST" action="">
+
+        <p>
+            Please Enter your Name: <input type="text" name="myname" size="20" placeholder="Enter name" />
+        </p>
+
+        <p>
+            Please select your class : 
+            <select name="myclass">
+                <option value="Empty">Please select a Class:</option>
+                <option value="FR">Freshperson</option>
+                <option value="SO">Sophmore</option>
+                <option value="JR">Junior</option>
+                <option value="SR"> Senior</option>
+            </select>
+        </p>
+
+        <p>
+            Please Select your Grade:
+           <input type="radio" name="grade" value="A" /> A Grade 
+           <input type="radio" name="grade" value="B" /> B Grade
+           <input type="radio" name="grade" value="C" /> C Grade
+        </p>
+
+        <p> 
+            Please select the magazines that you read:</br>
+            <input type="checkbox" name="mymags" value="WSJ"/> Wall Street Journal </br>
+            <input type="checkbox" name="mymags" value="BG"/> Boston Globe </br>
+            <input type="checkbox" name="mymags" value="NYT"/> New York Times
+
+        </p>
+
+        <p> 
+            Please enter any suggestions for the course:</br>
+            <textarea  name ="mysuggs" rows="10" cols="40" name="com" placeholder="Type something here">
+            </textarea>
+        </p>
+
+        <p>
+            <input type="submit" name="Submit" value="I am Done">
+            <input type="reset" name="Reset" value="I am Wrong">
+        </p>
+
+
+
+
+
+
+
+
+
+    </form>
+
+
+
+
+</body>
+
+</html>

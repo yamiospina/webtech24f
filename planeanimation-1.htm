@@ -16,38 +16,20 @@
 	<script>
 	/* Your JavaScript goes here */
 		var pos = 0;
-		var flystatus = 0, mytimer;
 		function flyPlane()
 		{
 			var myplane;
-
-			flystatus = 1;
 			myplane = document.getElementById("daplane");
 			myplane.style.left = pos + "px";
-			pos = pos+1;  /*pos +=1; or  ++pos;*/
+			pos = pos+10;
 			if(pos > 1000)
 				{
 					pos = 0;
 				}
-			mytimer= setTimeout("flyPlane()", 10);
+			setTimeout("flyPlane()", 500);
 		}
 	
-	/*how does one function call another function*/
-
-	/*if 0 is not flying, if 1 is flying */
-	function startStop()
-	{
-		if (flystatus==0)
-		{
-			mytimer = setTimeout("flyPlane()", 10);
-		}
-
-		else
-		{
-			clearTimeout(mytimer);
-			flystatus = 0;
-		}
-	}
+	
 
 
 	  
@@ -58,8 +40,7 @@
 	<!-- Your HTML goes here -->
 	<img id="daplane" src="flying.jpg" alt="Flying Plane" title="Flier"/>
 	<br/>
-	<button onclick="startStop()">Start/Stop</button>
-	<!--This new function will call on our old functio, to help start and stop the animation-->
+	<button onclick="flyPlane()">Click to Fly</button>
 	
   </body>
 </html>

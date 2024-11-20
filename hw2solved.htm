@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Homework 2 Solved</title>
+
+	<style>
+	/* Your styles go here */
+    table {font-family:Arial; font-size:20px;
+        width:60%; margin-right:auto; margin-left:auto;text-align:center;}
+    table, td {border:2px solid black; }
+    p#buttons {text-align:center;}
+    input#sub, input#res {height:30px;}
+    input#sub {background-color:green;}
+    input#res {background-color:yellow;}
+    .c1 {width:35%}
+    .c3 {width:25%}
+    .c2, .c4 {width:20%;}
+    img {width:45%;}
+    caption {font-family:Lucida Grande; font-size:2em; font-weight:bold; color:navy; margin-bottom:20px;}
+    form {background:url(brick.gif);margin:40px 200px; padding-top:40px; padding-bottom:40px;}
+	
+	</style>
+	<script type="text/javascript">	
+
+   
+		
+
+	</script>
+	
+	
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<form method="POST" action="">
+        <table>
+            <caption>Catalog of Sweaters</caption>
+            <tr>
+                <td class="c1">Product Image</td>
+                <td class="c2">Product Price</td>
+                <td class="c3">Product Selection</td>
+                <td class="c4">Product Quantity</td>
+            </tr>
+            <tr>
+                <td class="c1"><img src="redsweater.jpg" alt="Red Sweater Image" title="Red Sweater"/></td>
+                <td class="c2">$35.00</td>
+                <td class="c3"><input type="radio" name="sweater" value="RS"/>Red Sweater </td>
+                <td class="c4">Quantity: &nbsp; <input type="text" name="redQ" size="10"/></td>
+            </tr>
+            <tr>
+                <td class="c1"><img src="whitesweater.jpg" alt="White Sweater Image" title="White Sweater"/></td>
+                <td class="c2">$30.00</td>
+                <td class="c3"><input type="radio" name="sweater" value="WS"/>White Sweater</td>
+                <td class="c4">Quantity: &nbsp; <input type="text" name="whiteQ" size="10"/></td>
+            </tr>
+            <tr>
+                <td class="c1"><img src="bluesweater.jpg" alt="Blue Sweater Image" title="Blue Sweater"/></td>
+                <td class="c2">$45.00</td>
+                <td class="c3"><input type="radio" name="sweater" value="BS"/>Blue Sweater</td>
+                <td class="c4">Quantity: &nbsp; <input type="text" name="blueQ" size="10"/></td>
+            </tr>
+        </table>
+        <p id="buttons">
+            <input id="sub" type="submit" name="submit" value="Submit Selections"/>
+            &nbsp;&nbsp;&nbsp; 
+            <input id="res" type="reset" name="reset" value="Clear Selections" />
+        </p>
+
+    </form>	
+
+
+
+
+		
+	
+	
+  </body>
+</html>
