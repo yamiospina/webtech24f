@@ -24,10 +24,13 @@
 	{
 		var myf, myprod, myquant, myamt, total_price;
 		event.preventDefault();
+
 		myf= document.getElementById("food");
+
 		myprod = myf.product.value;  
 		myprod= myprod.toLowerCase(); 
 		myquant = myf.quantity.value;  
+		
 		myamt = myf.AmtDue.value;  
 		total_price=0;
 		
