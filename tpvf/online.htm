@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Online-location</title>
+
+  <meta name="description" content="Explore online options for threaded crafts and tutorials. Find resources on Etsy, Pinterest, and YouTube for crocheting, knitting, embroidery, and punch needle.">
+    <meta name="keywords" content="crocheting, knitting, embroidery, punch needle, online tutorials, Etsy, Pinterest, YouTube, crafts">
+    <meta name="author" content="Stitch Sisters">
+
+  <link rel="stylesheet" href="external.css" type="text/css">
+	<style>
+	/* Your styles go here */
+    body{background-color: pink;}
+    img{width: 30%;}
+
+    h2{text-align: center;font-family: cursive;}
+	
+
+    td{ border: 1px dotted black;}
+
+    table#online
+		{
+			font-family:Arial; 
+			font-size:20px;
+			width:60%;
+			border: 1px solid black;
+			text-align:center;
+			margin-left:auto; margin-right:auto;
+      margin-bottom: 5%;
+     
+		}
+
+	
+
+    tr#link{font-size: small; font-family: sans-serif;color: black;}
+
+    tr#pages{font-size: small;}
+
+
+
+
+
+
+	</style>
+
+  <script type="text/javascript">
+
+    
+function changeBackgroundColor() {
+        const colors = ["#FF5733", "#33FF57", "#3357FF", "#F3FF33", "#FF33F3"];
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        document.body.style.backgroundColor = colors[randomIndex];
+      }
+
+  </script>
+	
+
+	
+	
+	
+  </head>
+
+  <body  onclick="changeBackgroundColor()">
+
+	<!-- Your HTML goes here -->
+  <div class="topnav" id="mytopnav">
+    <a href="home.html">Home</a>
+    <div class="dropdown">
+        <button class="dropdownbutton">Types</button>
+        <div class="dropdowncontent">
+            <a href="crocheting.htm">Crocheting</a>
+            <a href="knitting.htm">Knitting</a>
+            <a href="embroidery.htm">Embroidery</a>
+            <a href="pneedle.htm">Punch Needle</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropdownbutton">Locations</button>
+        <div class="dropdowncontent">
+            <a href="boston.htm">Boston</a>
+            <a class="active" href="online.htm">Online & Retail</a>
+        </div>
+    </div>
+    <a href="contactme.htm">Contact Me</a>
+    <a href="aboutme.htm">About Me</a>
+    <a href="credits.htm">Credits</a>
+   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a> 
+</div>  
+     <h2>Online choices for threaded crafts & tutorials </h2>
+	<p></p>
+
+    <table  id="online">
+        <tr id="pages">
+             <td class="first">Etsy</td>
+             <td class="sec">Pinterest</td>
+             <td class="tr">Youtube</td>
+        </tr>
+
+       
+			<tr id="logo">
+			 	 <td class="first"><img src="etsy.jpg" alt="elogo" title="etsylogo"></td>
+				 <td class="sec"><img src="pinterest.jpg" alt="plogo" title="pinterstlogo"></td>
+				 <td class="tr"><img src="youtube.jpg" alt="ylogo" title="youlogo"></td>
+			</tr>
+
+          
+        <tr id="link">
+              <td class="first"><a href= "https://www.etsy.com">Etsy</a></td>
+              <td class="sec"><a href= "https://www.pinterest.com">Pinterest</a></td>
+              <td class="tr"><a href= "https://www.youtube.com">Youtube</a></td>
+        </tr>   
+            
+		
+    </table>  
+
+
+    <table id="online">
+      <tr id="pages">
+           <td class="one">Joanns</td>
+           <td class="two">Hobby Lobby</td>
+           <td class="tre">Michaels</td>
+      </tr>
+
+     
+    <tr id="logo">
+        <td class="one"><img src="JOANN.jpg" alt="elogo" title="joanlogo"></td>
+       <td class="two"><img src="hb.jpg" alt="plogo" title="hblogo"></td>
+       <td class="tre"><img src="michaels.jpg" alt="ylogo" title="michaleslogo"></td>
+    </tr>
+
+        
+      <tr id="link">
+        <td class="one"><a href= "https://www.joanns.com">Joanns fabric Store</a></td>
+        <td class="two"><a href ="https://www.hobbylobby.com">Hobby Lobby</a> </td>
+        <td class="tre"><a href ="https://www.michaels.com/">Michaels</a></td>
+      </tr>   
+          
+  
+  </table>  
+
+
+		
+	
+	
+  </body>
+</html>

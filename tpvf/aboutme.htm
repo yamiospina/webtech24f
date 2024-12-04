@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+    <meta name="description" content="Learn more about Yami, the creator behind Stitch Sisters. Discover her journey in needle thread crafts and explore her personal projects.">
+    <meta name="keywords" content="about me, Yami, Stitch Sisters, needle thread crafts, personal projects, crocheting, knitting, embroidery, punch needle">
+    <meta name="author" content="Stitch Sisters">
+    <title>About Me</title>
+    <link rel="stylesheet" href="external.css" type="text/css">
+    <style>
+     body {
+            background-color: pink;
+            font-family: cursive;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3, p {
+            margin: 5px 0; /* Adjust the margin as needed */
+            padding: 0;
+            text-align: center;
+        }
+        h1 { text-align: center; }
+        p { text-align: center; background-color: lightgray; }
+        img#daimg { width: 250px; height: 250px; }
+        .center-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 50vh; /* Full viewport height */
+            text-align: center; /* Center text inside the container */
+            gap: 10px; /* Adjust the gap between elements as needed */
+        }
+
+        button{align-items: center;}
+    </style>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("h3#t1").click(function() {
+                $("p#p1").toggle(); /* Instead of using hide & show, replace with toggle */
+            });
+        });
+    </script>
+    <script>
+        var myimages = ["pr1.jpg", "pr2.jpg", "pr3.jpg", "pr4.jpg", "pr5.jpg"];
+        var counter = 0; /* This will count the index of the image we are calling */
+
+        function showSlides() {
+            var x = document.getElementById("daimg");
+            x.src = myimages[counter];
+            x.style.width = "250px";  
+            x.style.height = "250px";  
+            
+            ++counter; 
+            if (counter > myimages.length - 1) {
+                counter = 0;
+            }
+            
+            setTimeout(showSlides, 1000);
+        }
+
+        var colors = ["#FF69B4", "#4682B4", "#00FF7F", "#FFD700", "#800080", "#A9A9A9"];
+        var currentColorIndex = 0;
+
+        function changeColor() {
+            var title = document.getElementById("first");
+            title.style.color = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        }
+
+        var colors = ["#FF69B4", "#4682B4", "#00FF7F", "#FFD700", "#800080", "#A9A9A9"];
+        var currentColorIndex = 0;
+
+        function chgclr() {
+            var pagraph = document.getElementById("p1");
+            pagraph.style.color = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        }
+
+
+
+        function displayFunFact() {
+            const funFacts = [
+                "Yami started crocheting when she was just 5 years old!",
+                "She once made a crocheted doll of herself for a class project.",
+                "Yami loves to experiment with new needle threading techniques.",
+                "Her favorite yarn color is lavender.",
+                "Yami has taught many people to crochet.",
+                "Yami runs a crocheting club on Babson campus",
+            ];
+            const randomIndex = Math.floor(Math.random() * funFacts.length);
+            document.getElementById("funFact").innerText = funFacts[randomIndex];
+        }
+
+        var fonts = ["Arial, sans-serif", "Courier New, monospace", "Georgia, serif", "Times New Roman, serif", "Verdana, sans-serif"];
+        var currentFontIndex = 0;
+
+        function chgFont()
+        {
+            var first = document.getElementById("mine")
+            first.style.fontFamily = fonts[currentFontIndex];
+            currentFontIndex = (currentFontIndex + 1) % fonts.length;
+        }
+    </script>
+</head>
+<body>
+    <div class="topnav" id="mytopnav">
+        <a href="home.html">Home</a>
+        <div class="dropdown">
+            <button class="dropdownbutton">Types</button>
+            <div class="dropdowncontent">
+                <a href="crocheting.htm">Crocheting</a>
+                <a href="knitting.htm">Knitting</a>
+                <a href="embroidery.htm">Embroidery</a>
+                <a href="pneedle.htm">Punch Needle</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdownbutton">Locations</button>
+            <div class="dropdowncontent">
+                <a href="boston.htm">Boston</a>
+                <a href="online.htm">Online & Retail</a>
+            </div>
+        </div>
+        <a href="contactme.htm">Contact Me</a>
+        <a class="active" href="aboutme.htm">About Me</a>
+        <a href="credits.htm">Credits</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a> 
+    </div>  
+
+    <h1 id="first" onclick="changeColor()">All about Yami</h1>
+    
+    <h3 id="t1">Hello & Welcome to Stitch Sisters.</h3> 
+    <p id="p1" onclick="chgclr()"> A little about me, growing my mom introduced me to the arts of needle thread crafts. <br>
+        Starting off with crocheting, I grew up making small projects, like those included on this page. <br>
+        In college, I have been lucky enough to be a part of Threads & Friends Org. at <br>
+        Babson College. A special place, where the student body has been introduced to the arts of <br>
+        needle threading.
+        Now I want to build a safe place for all needle thread crafts enthusiasts, or beginners can join,<br>
+        to learn and share. So excited to have you all Stitch Sisters!<br>
+    </p>
+    <div class="center-container">
+        <h2 id="mine" onclick="chgFont()">Personal projects</h2>
+        <img id="daimg" src="pr1.jpg" alt="Slide Show of project" title="project"/>
+        <div id="b">
+            <button onclick="showSlides()">Click to stop/resume</button>
+        </div>
+    </div>
+
+    <h2>Fun Fact About Yami</h2>
+    <p id="funFact"></p>
+    <button onclick="displayFunFact()">Show Fun Fact</button>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<meta name="description" content="Explore threading places in Boston for all your craft needs. Find local shops, workshops, and resources for crocheting, knitting, embroidery, and punch needle.">
+    <meta name="keywords" content="Boston, crocheting, knitting, embroidery, punch needle, crafts, workshops, local shops">
+    <meta name="author" content="Stitch Sisters">
+	<title>Boston-Location</title>
+	<link rel="stylesheet" href="external.css" type="text/css">
+	<style>
+	/* Your styles go here */
+	body{background-color: pink; font-family: cursive;}
+	h2{text-align: center;}
+	h3{position:absolute;}
+
+	.map-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Adjust this value as needed */
+
+        }
+        iframe {
+            border: 0; /* Optional: Remove border */
+        }
+
+		.image-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Adjust the gap between images as needed */
+        }
+        img { width: 20%; cursor: pointer; }
+		
+
+
+	</style>
+
+	<script type="text/javascript">
+
+function switchImgc() {
+            var img = document.getElementById("cr1");
+            if (img.src.includes("c1.jpg")) {
+                img.src = "c2.jpg";
+            } else {
+                img.src = "c1.jpg";
+            }
+        }
+
+
+		function switchImgp() {
+            var img = document.getElementById("pn1");
+            if (img.src.includes("n1.jpg")) {
+                img.src = "n2.jpg";
+            } else {
+                img.src = "n1.jpg";
+            }
+        }
+
+		function switchImge() {
+            var img = document.getElementById("em1");
+            if (img.src.includes("e1.jpg")) {
+                img.src = "e2.jpg";
+            } else {
+                img.src = "e1.jpg";
+            }
+        }
+
+		function switchImgk() {
+            var img = document.getElementById("kn1");
+            if (img.src.includes("k1.jpg")) {
+                img.src = "k2.jpg";
+            } else {
+                img.src = "k1.jpg";
+            }
+        }
+
+		const mytext = new Array (" Find Crochet Places near You❤️ ", "Punch Needle Places near You❤️", "Embroidery Resources near You❤️", "Knitting Places near You❤️")
+		var pos = 800, ctr =0;  /* pos is var bc it will be changing throughout our code, const can not change*/
+
+		function scrollText()
+		{
+			document.getElementById("mover").innerHTML = mytext[ctr];
+			document.getElementById("mover").style.left = pos + "px"; 
+            /* if we want to go from left to right change the right position 
+            if we want to go from up down, change the top position */
+			pos -=1; /* pos = pos -1 */
+
+			if(pos < 100)
+			{
+				pos = 800;
+				++ ctr;
+				if(ctr >= mytext.length) /* we put -1 if we didnt put >=, else we would leave as if */
+				{
+					ctr = 0;
+				}
+			}
+
+			setTimeout("scrollText()",5);
+		}
+
+
+
+
+	</script>
+	
+	
+	
+	
+	
+  </head>
+
+  <body onload="scrollText()">
+	<!-- Your HTML goes here -->
+	<div class="topnav" id="mytopnav">
+		<a href="home.html">Home</a>
+		<div class="dropdown">
+			<button class="dropdownbutton">Types</button>
+			<div class="dropdowncontent">
+				<a href="crocheting.htm">Crocheting</a>
+				<a href="knitting.htm">Knitting</a>S
+				<a href="embroidery.htm">Embroidery</a>
+				<a href="pneedle.htm">Punch Needle</a>
+			</div>
+		</div>
+		<div class="dropdown">
+			<button class="dropdownbutton">Locations</button>
+			<div class="dropdowncontent">
+				<a class="active" href="boston.htm">Boston</a>
+				<a href="online.htm">Online & Retail</a>
+			</div>
+		</div>
+		<a href="contactme.htm">Contact Me</a>
+		<a href="aboutme.htm">About Me</a>
+		<a href="credits.htm">Credits</a>
+	   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a> 
+	</div>  
+
+	
+	 <h2>Needle Crafts Resources Near You !</h2>
+
+	
+      
+	 <div class="image-container">
+		
+		<img id=cr1 onclick="switchImgc()" src="c1.jpg"></img></br>
+	
+		<img id=pn1 onclick="switchImgp()" src="n1.jpg"></img></br>
+		
+		<img id=em1 onclick="switchImge()" src="e1.jpg"></img></br>
+		
+		<img id=kn1 onclick="switchImgk()" src="k1.jpg"></img></br>
+	</div>
+	<div>
+		<h3 id="mover">..</h3>
+	</div>
+	<div class="map-container">
+	<iframe src="https://www.google.com/maps/d/embed?mid=1m5g7wdIe1cRlPIu-74SPS-hYkK01UDg&ehbc=2E312F" width="800" height="400"></iframe>
+	</div>	
+	
+  </body>
+</html>

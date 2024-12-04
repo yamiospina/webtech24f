@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Final Project</title>
+    <link rel="stylesheet" href="external.css" type="text/css">
+
+    <meta name="description" content="Stitch Sisters: Your go-to for all things yarn and thread! Discover tutorials, guides, and local shops for crocheting, knitting, embroidery, and punch needle.">
+    <meta name="keywords" content="crocheting, knitting, embroidery, punch needle, yarn, thread, tutorials, guides, craft supplies, workshops">
+    <meta name="author" content="Stitch Sisters">
+
+	<style>
+	/* Your styles go here */
+
+    div#banner{background:url(checked.jpg);padding-bottom:10px;padding-top: 10px; background-position: center;}
+    h1#header{text-align:center;color:black;font-weight: lighter;}
+    body{background-color:#FFF0F5;}
+    p{color:black;font-family:cursive;}
+   div#statement {
+    text-align: center;
+    max-width: 1350px; font-size:large;}
+
+    img#mover {
+    position: relative;
+  /*  left: 50px;  Adjust these values to move the image */
+    top: 20px;
+    width:25%;
+}
+
+
+        .images {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+    
+        .text {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        img{width:28%;}
+
+
+      
+        .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust the gap between images and text as needed */
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1; /* Ensures the paragraph takes up equal space */
+}
+	
+	</style>
+	
+	<script type="text/javascript">
+
+        function myFunction() {
+                    var x = document.getElementById("mytopnav");
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "topnav";
+                    }
+                }
+
+
+
+        let pos = 0;
+        function moveImage()
+         {
+            const image = document.getElementById("mover");
+            pos += 1; // Speed of the movement
+            image.style.left = pos + "px";
+            if (pos < window.innerWidth) {
+                requestAnimationFrame(moveImage);
+            } else {
+                pos = 0; // Reset position to start again
+                requestAnimationFrame(moveImage);
+            }
+        }
+        window.onload = moveImage;
+
+        function changeBackgroundColor() {
+        const colors = ["#FF5733", "#33FF57", "#3357FF", "#F3FF33", "#FF33F3"];
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        document.body.style.backgroundColor = colors[randomIndex];
+      }
+
+       /* function makeBig()
+        {
+            var txt = document.getElementById("welc");
+
+            txt.style.width = "500px";
+        }*/
+
+
+    </script>
+	
+  </head>
+
+  <body onload="moveImage()" onclick="changeBackgroundColor()">
+    
+	<!-- Your HTML goes here -->
+	
+<div id="banner">
+        <h1 id="header"> Stitch Sisters  </h1>
+    </div>
+
+
+    <!--onclick="playAudio();"--> 
+
+
+    <div class="topnav" id="mytopnav">
+     <a href="home.html" class="active">Home</a>
+
+        <div class="dropdown">
+            <button class="dropdownbutton">Types</button>
+            <div class="dropdowncontent">
+                <a href="crocheting.htm">Crocheting</a>
+                <a href="knitting.htm">Knitting</a>
+                <a href="embroidery.htm">Embroidery</a>
+                <a href="pneedle.htm">Punch Needle</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdownbutton">Locations</button>
+            <div class="dropdowncontent">
+                <a href="boston.htm">Boston</a>
+                <a href="online.htm">Online & Retail</a>
+            </div>
+        </div>
+        
+        <a href="contactme.htm">Contact Me</a>
+        <a href="aboutme.htm">About Me</a>
+        <a href="credits.htm">Credits</a>
+       <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a> 
+    </div>  
+
+    <div>
+        <img id="mover" src="gif_no_bg.png">
+    </div>
+
+</br>
+
+<div class="container">
+
+<div class="content"  >
+    <a href="embroidery.htm">
+    <img id="nee" src="embroi.jpg" alt="embro img" title="picture of embroidery example"></a>  
+
+    <a href="crocheting.htm">
+    <img  id="cr" src="crocet.jpg" alt="crocher img" title="picture of crocet example"></a>
+         
+</div>    
+
+     <div id="statement">
+
+        <h2 id="welc" onmouseover="makeBig()">Welcome to Stitch Sisters! </br></h2>
+        <p class="text"> 
+             Your go-to for all things yarn and thread! </br>
+
+            Whether you're passionate about crocheting, </br>
+             knitting, embroidery, or punch </br>
+            needle, we offer a wide range of </br>
+            tutorial videos for every skill level. </br>
+            Discover step-by-step guides to help </br>
+             you create beautiful, handmade pieces, </br>
+            and explore local and online shops to </br>
+             find the perfect supplies. We also </br>
+            provide information on craft studios </br>
+             and community spaces where you can join </br>
+             workshops and meet fellow craft enthusiasts.</br>
+              Dive into the world of fiber </br>
+             arts and unleash your creativity with us!</br>  </p>  
+             
+     </div>
+        
+      
+    
+        
+           
+ 
+
+<div class="images">
+
+    <a href="pneedle.htm">
+<img id="one" src="punch.jpg" alt="punch needle img" title="picture of punch needle ex"> </a>
+
+<a href="knitting.htm">
+<img id="kt" src="knit.jpg" alt="knit img" title="picture of knitting example"></a>
+</div>
+
+</div>
+
+
+
+   
+
+
+  </body>
+</html>

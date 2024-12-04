@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Crocheting</title>
+    <link rel="stylesheet" href="external.css" type="text/css">
+    <style>
+        body { background-color: pink; }
+        h2 { text-align: center; }
+        div#ex { font-family: cursive; }
+        p { font-family: cursive; }
+        img { width: 70%; }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 35px;
+        }
+
+        .videos {
+            display: flex;
+            flex-direction: row; /* Ensure this is set to row */
+            align-items: flex-start; /* Align items to the start */
+            gap: 50px; /* Adjust the gap between videos as needed */
+        }
+        .video-container {
+            flex: 1;
+            min-width: 200px; /* Adjust based on your needs */
+        }
+
+        .table-section {
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        .table-section h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #DB7093;
+            font-family: cursive;
+        }
+
+        #colorTable {
+            width: 100%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        #colorTable td {
+            width: 50%;
+            height: 200px;
+            padding: 5px;
+            background-color: #DB7093;
+        }
+
+        #colorTable img {
+            width: 100%;
+            height: auto;
+            max-height: 150px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        #colorTable td:hover img {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("mytopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+    
+</head>
+<body>
+    <div class="topnav" id="mytopnav">
+        <a href="home.html">Home</a>
+        <div class="dropdown">
+            <button class="dropdownbutton">Types</button>
+            <div class="dropdowncontent">
+                <a class="active" href="crocheting.htm">Crocheting</a>
+                <a href="knitting.htm">Knitting</a>
+                <a href="embroidery.htm">Embroidery</a>
+                <a href="pneedle.htm">Punch Needle</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdownbutton">Locations</button>
+            <div class="dropdowncontent">
+                <a href="boston.htm">Boston</a>
+                <a href="online.htm">Online & Retail</a>
+            </div>
+        </div>
+        <a href="contactme.htm">Contact Me</aS>
+        <a href="aboutme.htm">About Me</a>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <div id="ex">
+        <h2 id="one">What is crocheting?</h2>
+        <p>Crocheting is a craft where you use a hooked needle (crochet hook) to create fabric from yarn or thread. You make loops and pull them through other loops to form stitches, which then build up into patterns and shapes. It's a bit like knitting, but with just one hook instead of two needles. It's great for making things like blankets, scarves, hats, and even toys!</p>
+        <ul>
+            <li>What do you need?</li>
+            <li>P.S these are links to my personal favorite supplies, but you can head over to <a href="online.htm">Online</a> tab for more resources</li>
+            <ol>
+                <li><a href="https://a.co/d/ivVQTLO">Crochet Hooks + Link to my Personal Favorite</a></li>
+                <li><a href="https://a.co/d/gTb0f2w">Yarn Needles</a></li>
+                <li><a href="https://a.co/d/dluOyVo">Stitch Markers</a></li>
+                <li><a href="https://a.co/d/fvbUnXu">Scissors - Specific for Crochet Yarn</a></li>
+                <li>Yarn - personal choice</li>
+            </ol>
+            <br>
+            <li>I also recommend utilizing YouTube or online patterns to learn stitches</li>
+            <li>ex: <a href="https://easycrochet.com/crochet-stitches/">Stitch Pattern Examples</a></li>
+            <li>The following resources are my personal favorites for beginner crocheting</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="videos">
+            <div>
+                <iframe width="250" height="205" src="https://www.youtube.com/embed/GcOzdAzmtNM?si=gjfyAcOIq-uGIkaF"
+                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media
+                 ; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>How to Stitch 101</p>
+                <iframe width="250" height="205" src="https://www.youtube.com/embed/zsWmVcp9RMU?si=x9R1V0Ot84YfqK7g"
+                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                  gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>How to make Magic Ring</p>
+                <iframe width="250" height="205" src="https://www.youtube.com/embed/NiubG8C5mzE?si=KYfAFUaFLvsbX39X" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>How to hold supplies</p>
+            </div>
+
+
+            <div class="video-container">
+               
+                <iframe id="myCrvideo" width="250" height="205" src="https://www.youtube.com/embed/w9CXXsu6YSA?si=CAtcglemukxxV7Yx" 
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                 <p> Beginners crochet heart ❤️ </p>
+
+                 <iframe width="250" height="205" src="https://www.youtube.com/embed/oF9AMDNkTHY?si=QzNsuCNzCYO8umdL" 
+                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                  gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <p> Beiginners crochet Pumpkin 🎃 </p>
+
+                  <iframe width="250" height="205" src="https://www.youtube.com/embed/UzajhgK3_FQ?si=JDwUt5krGyYWATnN" 
+                  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                  gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <p> Beginners bookmark 🔖</p>
+
+
+
+            </div>
+        </div>
+
+        <div class="table-section">
+            <h3>My Personal Crochet Projects</h3>
+            <table id="colorTable">
+                <tr>
+                    <td><img src="cr1.jpg" alt="Crochet Example 1"></td>
+                    <td><img src="cr2.jpg" alt="Crochet Example 2"></td>
+                </tr>
+                <tr>
+                    <td><img src="cr3.jpg" alt="Crochet Example 3"></td>
+                    <td><img src="cr4.jpg" alt="Crochet Example 4"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
